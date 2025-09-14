@@ -8,9 +8,10 @@ function adicionarTarefa() {
             let inputTarefa = document.getElementById("inputTarefa");
 
             //Cria a variável "tarefa", e denomina seu valor como o valor do "inputTarefa" para podermos ver o que tem dentro do input
-            let tarefa = inputTarefa.value;
+            let tarefa = inputTarefa.value.trim();
 
             if (tarefa === ""){
+                  // Seleciona o <p id="mensagem"> e altera seu conteúdo de texto para a variável "mensagemErro"
                   document.getElementById("mensagem").textContent = mensagemErro;
             }  else {
             // Seleciona o <p id="mensagem"> e altera seu conteúdo de texto para a variável "mensagem"
