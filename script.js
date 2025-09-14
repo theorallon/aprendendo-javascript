@@ -2,6 +2,7 @@ function adicionarTarefa() {
 
             // Cria a variável "mensagem" e define o texto de feedback
             let mensagem = "Tarefa adicionada com sucesso!";
+            let mensagemErro = "Nada para adicionar na lista!";
 
             // Cria a variável "tarefa" e atribui a ela o valor digitado no input
             let inputTarefa = document.getElementById("inputTarefa");
@@ -9,6 +10,9 @@ function adicionarTarefa() {
             //Cria a variável "tarefa", e denomina seu valor como o valor do "inputTarefa" para podermos ver o que tem dentro do input
             let tarefa = inputTarefa.value;
 
+            if (tarefa === ""){
+                  document.getElementById("mensagem").textContent = mensagemErro;
+            }  else {
             // Seleciona o <p id="mensagem"> e altera seu conteúdo de texto para a variável "mensagem"
             document.getElementById("mensagem").textContent = mensagem;
 
@@ -26,6 +30,7 @@ function adicionarTarefa() {
 
             // Limpa o campo de entrada após adicionar a tarefa
             inputTarefa.value = ""
+            }
 
             
     }
