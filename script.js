@@ -44,6 +44,8 @@ function adicionarTarefa() {
              // função para remover item da lista
             function excluirItem(){
             novaTarefa.remove()
+            let mensagemExcluir = "Tarefa excluída!"
+            document.getElementById("mensagem").textContent = mensagemExcluir;
             
             }
 
